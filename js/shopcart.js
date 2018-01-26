@@ -100,8 +100,7 @@ function seeIt() {
   //show payment button
   document.getElementById("payme").className = "btn btn-info";
   document.getElementById("printMe").className = "btn btn-info";
-  //show if was with card or paypal
-  var boolCreditCard = (creditCard == "true") ? alert("Credit Card Payment Selected") : alert("PayPal Payment Selected");
+
 
 }
 
