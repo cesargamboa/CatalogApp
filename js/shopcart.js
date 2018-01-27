@@ -99,7 +99,9 @@ function emptyCart() {
 
   z.innerHTML = "";
   x.innerHTML = "";
+    p.innerHTML = "";
   total = 0;
+
   //change payment options
 }
 
@@ -147,6 +149,7 @@ function seeIt() {
   //show payment button
   document.getElementById("payme").className = "btn btn-info";
   document.getElementById("printMe").className = "btn btn-info";
+document.getElementById("eraseMe").className = "btn btn-info";
 
 
 }
