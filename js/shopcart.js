@@ -96,11 +96,14 @@ function sum(y) {
 }
 //Erase content of the cart
 function emptyCart() {
-  var z = document.getElementById("result");
+
+  var erase1 = document.getElementById("result1");
   var x = (document.getElementById("shopcart"));
+  erase.innerHTML = "";
   z.innerHTML = "";
   x.innerHTML = "";
   p.innerHTML = "";
+  storageVar = 0;
   cartCounter.innerHTML = 0;
   total = 0;
 
