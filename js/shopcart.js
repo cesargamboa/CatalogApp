@@ -1,27 +1,27 @@
 //list of objects
 var items = [{
-    Game: "Residen Evil",
-    Price: 30
-  }, {
-    Game: "God of War",
-    Price: 30
-  }, {
-    Game: "Mass Effect",
-    Price: 24
-  },
-  {
-    Game: "Fallen",
-    Price: 14
-  }, {
-    Game: "Watch Dogs 2",
-    Price: 31
-  }, {
-    Game: "UFC 2018",
-    Price: 24
-  }, {
-    Game: "BattleField 1",
-    Price: 20
-  }
+  Game: "Residen Evil",
+  Price: 30
+}, {
+  Game: "God of War",
+  Price: 30
+}, {
+  Game: "Mass Effect",
+  Price: 24
+},
+{
+  Game: "Fallen",
+  Price: 14
+}, {
+  Game: "Watch Dogs 2",
+  Price: 31
+}, {
+  Game: "UFC 2018",
+  Price: 24
+}, {
+  Game: "BattleField 1",
+  Price: 20
+}
 ];
 var total = 0;
 var counter = 0;
@@ -96,10 +96,12 @@ function sum(y) {
 }
 //Erase content of the cart
 function emptyCart() {
-
+  var z = document.getElementById("result");
+  var x = (document.getElementById("shopcart"));
   z.innerHTML = "";
   x.innerHTML = "";
-    p.innerHTML = "";
+  p.innerHTML = "";
+  cartCounter.innerHTML = 0;
   total = 0;
 
   //change payment options
@@ -149,7 +151,7 @@ function seeIt() {
   //show payment button
   document.getElementById("payme").className = "btn btn-info";
   document.getElementById("printMe").className = "btn btn-info";
-document.getElementById("eraseMe").className = "btn btn-info";
+  document.getElementById("eraseMe").className = "btn btn-info";
 
 
 }
