@@ -20,8 +20,15 @@ function start6() { addValue(6); }
 
 //Create the output using parameters from start
 function addValue(a) {
-  var x = document.getElementById("shopcart");
+  var cartCounter=(document.getElementById("counter"));
+
+
+  var x =(document.getElementById("shopcart"));
+
+
   x.innerHTML += "<tr class=" + "table-dark" + "><td>" + items[a].Game + "</td>" + "<td>$" + items[a].Price + "</td></tr>";
+ cartCounter.innerHTML+=1;
+
   //create summary
   array[a] = items[a].Game;
   array1[a] = items[a].Price;
