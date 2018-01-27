@@ -1,8 +1,30 @@
 //list of objects
-var items = [{ Game: "Residen Evil", Price: 30 }, { Game: "God of War", Price: 30 }, { Game: "Mass Effect", Price: 24 },
-{ Game: "Fallen", Price: 14 }, { Game: "Watch Dogs 2", Price: 31 }, { Game: "UFC 2018", Price: 24 }, { Game: "BattleField 1", Price: 20 }];
+var items = [{
+    Game: "Residen Evil",
+    Price: 30
+  }, {
+    Game: "God of War",
+    Price: 30
+  }, {
+    Game: "Mass Effect",
+    Price: 24
+  },
+  {
+    Game: "Fallen",
+    Price: 14
+  }, {
+    Game: "Watch Dogs 2",
+    Price: 31
+  }, {
+    Game: "UFC 2018",
+    Price: 24
+  }, {
+    Game: "BattleField 1",
+    Price: 20
+  }
+];
 var total = 0;
-var counter=0; 
+var counter = 0;
 itemVal = 0;
 var creditCard = false;
 window.localStorage.setItem("creditCard", creditCard);
@@ -11,22 +33,42 @@ var array = [];
 var array1 = [];
 
 //Activate the addValue function
-function start() { addValue(0); }
-function start1() { addValue(1); }
-function start2() { addValue(2); }
-function start3() { addValue(3); }
-function start4() { addValue(4); }
-function start5() { addValue(5); }
-function start6() { addValue(6); }
+function start() {
+  addValue(0);
+}
+
+function start1() {
+  addValue(1);
+}
+
+function start2() {
+  addValue(2);
+}
+
+function start3() {
+  addValue(3);
+}
+
+function start4() {
+  addValue(4);
+}
+
+function start5() {
+  addValue(5);
+}
+
+function start6() {
+  addValue(6);
+}
 
 //Create the output using parameters from start
 function addValue(a) {
-  var cartCounter=(document.getElementById("counter"));
-  var x =(document.getElementById("shopcart"));
+  var cartCounter = (document.getElementById("counter"));
+  var x = (document.getElementById("shopcart"));
   x.innerHTML += "<tr class=" + "table-dark" + "><td>" + items[a].Game + "</td>" + "<td>$" + items[a].Price + "</td></tr>";
 
-  counter=counter+1;
-  cartCounter.innerHTML=counter;
+  counter = counter + 1;
+  cartCounter.innerHTML = counter;
   //create summary
   array[a] = items[a].Game;
   array1[a] = items[a].Price;
@@ -60,12 +102,15 @@ function emptyCart() {
   total = 0;
   //change payment options
 }
+
 function addOptionsCreditCard() {
   creditCard = true;
   document.getElementById("payment").className = "form-group";
   window.localStorage.setItem("creditCard", creditCard);
 
-} function addOptionsPayPal() {
+}
+
+function addOptionsPayPal() {
   document.getElementById("payment").className = "form-group hidden";
   creditCard = false;
   window.localStorage.setItem("creditCard", creditCard);
@@ -111,6 +156,7 @@ function confirm() {
   alert("CONGRATULATIONS! THE PURCHASED IS COMPLETE");
   window.location.href = "index.html";
 }
+
 function printBill() {
 
   window.print();
