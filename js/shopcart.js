@@ -2,6 +2,7 @@
 var items = [{ Game: "Residen Evil", Price: 30 }, { Game: "God of War", Price: 30 }, { Game: "Mass Effect", Price: 24 },
 { Game: "Fallen", Price: 14 }, { Game: "Watch Dogs 2", Price: 31 }, { Game: "UFC 2018", Price: 24 }, { Game: "BattleField 1", Price: 20 }];
 var total = 0;
+var counter=0; 
 itemVal = 0;
 var creditCard = false;
 window.localStorage.setItem("creditCard", creditCard);
@@ -21,14 +22,11 @@ function start6() { addValue(6); }
 //Create the output using parameters from start
 function addValue(a) {
   var cartCounter=(document.getElementById("counter"));
-
-
   var x =(document.getElementById("shopcart"));
-
-
   x.innerHTML += "<tr class=" + "table-dark" + "><td>" + items[a].Game + "</td>" + "<td>$" + items[a].Price + "</td></tr>";
- cartCounter.innerHTML+=1;
 
+  counter=counter+1;
+  cartCounter.innerHTML=counter;
   //create summary
   array[a] = items[a].Game;
   array1[a] = items[a].Price;
@@ -37,8 +35,6 @@ function addValue(a) {
 
   window.localStorage.setItem("summary", summary);
   window.localStorage.setItem("summary1", summary1);
-
-
 
   //send info to create total
   sum(items[a].Price);
@@ -78,7 +74,6 @@ function addOptionsCreditCard() {
 //navigate to shopping bag using js
 function summary() {
   var movetoCheck = window.location.href = "checkout.html";
-
 }
 //print summary
 function seeIt() {
@@ -113,7 +108,7 @@ function seeIt() {
 
 function confirm() {
 
-  alert("CONGRATULATIONS! THE PURCHASED IS COMPLETED");
+  alert("CONGRATULATIONS! THE PURCHASED IS COMPLETE");
   window.location.href = "index.html";
 }
 function printBill() {
@@ -121,9 +116,3 @@ function printBill() {
   window.print();
 
 }
-
-
-
-
-
-
