@@ -1,35 +1,82 @@
 <html>
 
 <head>
-    <title>Cesar's Store</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <link rel="stylesheet" href="css/slate-bootstrap.min.css">
+  <title>Cesar's Store</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/slate-bootstrap.min.css">
+  <script src="js/shopcart.js"></script>
 </head>
-<form>
+
+<body>
+  <header>
+    <br>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary active">
+      <a class="navbar-brand active" href="index.html">
+        <span class="glyphicon glyphicon-home"></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">STORE
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="News.html">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact US</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <span class="badge badge-info" id="cartCounter();">
+            <h1 id="counter">0</h1>
+          </span>
+          <button class="btn btn-primary">
+            <span class="glyphicon glyphicon-shopping-cart"></span>
+          </button>
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+
+
+
+    </nav>
+
+  </header>
+  <form>
     <fieldset>
-        <legend>Contact Cesar´s Game Store</legend>
-        <div class="form-group row">
-            <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-            
-        </div>
-        <div class="form-group container col-md-8 offset-md-1">
-           
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
+      <legend>Contact Cesar´s Game Store</legend>
+      <div class="form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
 
-       
+      </div>
+      <div class="form-group container col-md-8 offset-md-1">
 
-        <div class="form-group container col-md-8 offset-md-1">
-            <label for="exampleTextarea">Type the message</label>
-            <textarea class="form-control" id="Type your message" rows="3"></textarea>
-        </div>
-        <input type="button" class="btn btn-primary col-md-1 offset-md-2" value="Send" onclick="">
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
 
 
-</form>
+
+      <div class="form-group container col-md-8 offset-md-1">
+        <label for="exampleTextarea">Type the message</label>
+        <textarea class="form-control" id="Type your message" rows="3"></textarea>
+      </div>
+      <input type="button" class="btn btn-primary col-md-1 offset-md-2" value="Send" onclick="">
+
+
+  </form>
 
 </body>
 

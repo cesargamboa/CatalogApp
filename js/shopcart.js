@@ -90,13 +90,10 @@ function sum(y) {
   //storage total
   var storageVar = total;
   window.localStorage.setItem("storageVar", storageVar);
-
-
-
 }
 //Erase content of the cart
 function emptyCart() {
-
+  var z = document.getElementById("result");
   var erase1 = document.getElementById("shopcart1");
   var x = (document.getElementById("shopcart"));
   erase1.innerHTML="";
